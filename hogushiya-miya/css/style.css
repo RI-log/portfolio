@@ -1,0 +1,522 @@
+/* ======== 全体のスタイル ======== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding-top: 60px;
+  background-color: #f8f4f0;
+  color: #333;
+  background-image: url('../images/background-pattern.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* メインコンテンツ */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ======== ヘッダー ======== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* ロゴ */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* ======== ナビゲーション ======== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* 中央寄せの目次 */
+.nav-center {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.nav-center li {
+  margin: 0 15px;
+}
+
+.nav-center li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 右寄せのソーシャルアイコン */
+.nav-right {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-right li {
+  margin-left: 15px;
+}
+
+/* ソーシャルアイコン */
+.social-icon {
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #007bff;
+}
+
+/* ======== LINEアイコン ======== */
+.line-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* ======== スライドショー ======== */
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ← → ボタンのスタイル */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 0px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* ======== 各セクション ======== */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h2 {
+  border-bottom: 2px solid #003366;
+  padding-bottom: 10px;
+}
+
+/* 駐車場の画像サイズを調整 */
+.parking img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === セクション全体の配置 === */
+#target {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 見出しのスタイル修正（画像と重ならないように） */
+#target h2 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #003366;
+}
+
+/* リストと画像を横並びに */
+.target-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* リストのエリア */
+.target-text {
+  flex: 1;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+
+/* リストの上の余白を完全削除 */
+.target-text ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* リストアイテム（li）の余白調整 */
+.target-text ul li {
+  margin-top: 5px;
+  padding: 0;
+}
+
+/* 段落（<p>）の上の余白を調整 */
+.target-text p {
+  margin-left: 20px;
+}
+
+/* 画像のエリア */
+.hogushi-image {
+  flex-shrink: 0;
+}
+
+.hogushi-image img {
+  max-width: 100%;
+  width: 250px;
+  height: auto;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ======== 予約ボタン ======== */
+.button {
+  display: inline-block;
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #002244;
+}
+
+/* FAQのスタイル */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* 質問ボタン */
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;
+}
+
+/* 回答部分（デフォルトは非表示） */
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* アクティブな質問のボタン */
+.faq-question.active {
+  background: #d0d0d0;
+}
+
+/* ======== フッター ======== */
+footer {
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+}
+
+/* フッター内の実用情報 */
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* 著作権情報 */
+.footer-copyright {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* 電話番号リンク */
+.footer-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-info a:hover {
+  color: #ffcc00;
+}
+
+/* ======== モーダル（QRコード） ======== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* QRコード */
+.qr-code {
+  width: 100%;
+  height: auto;
+}
+
+.qr-description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* コースのリストの行間調整（<li> のみ対象） */
+#course ul li {
+  margin-bottom: 40px;
+}
+
+/* <p> 内の行間は影響を受けないようにする */
+#course ul li p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* ======== 支払方法の画像スタイル（拡大 & 中央配置） ======== */
+.payment-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.payment-icon {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ======== レスポンシブ対応 ======== */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  main {
+    width: 90%;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 15px;  
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;  
+  }
+
+  /* メニューを開いたとき */
+  .nav-center.active {
+    display: flex;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-right li {
+    margin: 0 10px;
+  }
+
+  .slideshow {
+    height: 250px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    top: 45%;
+  }
+
+  /* セクションも中央寄せ */
+  section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Google Map のサイズ調整 */
+  .map iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .target-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 画像をリストの下に配置 */
+  .hogushi-image {
+    order: 1;
+    margin-top: 15px;
+  }
+
+  .target-text {
+    order: 0;
+  }
+
+  /* リストを中央寄せ（オプション） */
+  .target-text ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  /* スマホ用支払方法画像調整 */
+  .payment-icon {
+    width: 250px;
+  }
+}
