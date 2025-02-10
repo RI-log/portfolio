@@ -137,6 +137,11 @@ nav {
   object-fit: cover;
 }
 
+/* デフォルト（PC版）では br を非表示 */
+br.mobile-only {
+  display: none;
+}
+
 /* ← → ボタンのスタイル */
 .prev,
 .next {
@@ -473,6 +478,10 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  br.mobile-only {
+    display: block;
   }
 
   .prev,
