@@ -9,7 +9,7 @@
 世界ランキングを狙うための目標として使用することができます。<br>
 今回は初版ということでデザインが地味ですが、今後はもっとデザインに力を入れていきたいと思います。<br>
 <br>
-[ほぐし屋 Miya](https://ri-log.github.io/portfolio/ほぐし屋%20Miya/index.html)
+[ほぐし屋 Miya](https://ri-log.github.io/portfolio/hogushiya-miya/index.html)
 
 このサイトは実在するほぐしの施術をしているお店になります。<br>
 まだ開業したばかりでホームページがなかったため手探りながら作成しました。<br>
