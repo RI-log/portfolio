@@ -2,7 +2,7 @@
 随時作成したらここにアップロードする予定です。
 
 # 作品一覧
-<!-- (https://ri-log.github.io/portfolio/(ディレクトリ名)/index.html) -->
+<!-- [作品名](https://ri-log.github.io/portfolio/(ディレクトリ名)/index.html) -->
 [トラップキャッチカウント](https://ri-log.github.io/portfolio/TrapCatch_v0/index.html)
 
 これはDead By Daylightというゲームで使用するときのために作成したサイトになります。<br>
