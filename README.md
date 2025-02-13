@@ -2,6 +2,7 @@
 随時作成したらここにアップロードする予定です。
 
 # 作品一覧
+<!-- (https://ri-log.github.io/portfolio/(ディレクトリ名)/index.html) -->
 [トラップキャッチカウント](https://ri-log.github.io/portfolio/TrapCatch_v0/index.html)
 
 これはDead By Daylightというゲームで使用するときのために作成したサイトになります。<br>
@@ -16,5 +17,3 @@
 身体が凝り固まっている方はもちろん、貸切空間で施術を受けたい方、<br>
 いつも同じスタッフから施術を受けたい方にとてもオススメなお店です。<br>
 このホームページで集客効果が出ることを祈っています。
-
-<!-- (https://ri-log.github.io/portfolio/(ディレクトリ名)/index.html) -->
