@@ -52,7 +52,7 @@ window.onclick = function(event) {
     }
 };
 
-// ===================== ナビゲーションの動的制御（オプション） ===================== //
+// ===================== ナビゲーションの動的制御 ===================== //
 // ヘッダーの固定時のスタイル変更（スクロール時の影付け）
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
@@ -65,39 +65,63 @@ window.addEventListener("scroll", function () {
 
 // ===================== スマホナビゲーションの開閉（オプション） ===================== //
 // ハンバーガーメニューの開閉処理
-function toggleMenu() {
-  const nav = document.querySelector('.nav-center');
-  nav.classList.toggle('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ JavaScript が読み込まれました！");
 
-// ハンバーガーメニュー（必要ならHTMLにボタンを追加）
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.querySelector(".nav-wrapper");
+    setTimeout(() => { // 100ms 遅らせて確実に取得
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.querySelector(".nav-center");
 
-if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-}
+        console.log("menuToggle:", menuToggle);
+        console.log("navMenu:", navMenu);
+
+        if (!menuToggle) {
+            console.error("⚠️ menuToggle が見つかりません！（JavaScript が正しく読み込まれていない？）");
+            return;
+        }
+
+        if (!navMenu) {
+            console.error("⚠️ navMenu が見つかりません！（HTML に誤りがある？）");
+            return;
+        }
+
+        console.log("✅ menuToggle にクリックイベントを設定します！");
+
+        function toggleMenu(event) {
+            event.preventDefault();
+            const nav = document.querySelector('.nav-center');
+            nav.classList.toggle('active');
+            console.log("メニューが開閉されました！", nav.classList);
+        }
+
+        // `click` イベントを追加
+        menuToggle.addEventListener("click", toggleMenu);
+        menuToggle.addEventListener("touchstart", toggleMenu);
+
+        console.log("✅ menuToggle にクリックイベントが設定されました！");
+    }, 100); // 100ms 遅延させて DOM の準備を確実にする
+});
+
+
 
 // ===================== よくある質問（オプション） ===================== //
 // よくある質問の折りたたみ機能（アコーディオン）
 document.addEventListener("DOMContentLoaded", function () {
-  const faqButtons = document.querySelectorAll(".faq-question");
+    const faqButtons = document.querySelectorAll(".faq-question");
 
-  faqButtons.forEach(button => {
-      button.addEventListener("click", function () {
-          // 現在のボタンの直後の「.faq-answer」を取得
-          const answer = this.nextElementSibling;
+    faqButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            // 現在のボタンの直後の「.faq-answer」を取得
+            const answer = this.nextElementSibling;
 
-          // 開閉処理
-          if (answer.style.display === "block") {
-              answer.style.display = "none";
-              this.classList.remove("active");
-          } else {
-              answer.style.display = "block";
-              this.classList.add("active");
-          }
-      });
-  });
+            // 開閉処理
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                this.classList.remove("active");
+            } else {
+                answer.style.display = "block";
+                this.classList.add("active");
+            }
+        });
+    });
 });
